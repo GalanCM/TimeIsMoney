@@ -1,0 +1,53 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Profit.gd" type="Script" id=1]
+
+[node name="Profit" type="Panel" groups=[
+"Profit",
+]]
+margin_right = 199.0
+margin_bottom = 58.0
+script = ExtResource( 1 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_top = 10.0
+margin_right = -10.0
+margin_bottom = -10.0
+
+[node name="Profit" type="MarginContainer" parent="VBoxContainer"]
+margin_right = 179.0
+margin_bottom = 14.0
+
+[node name="Label" type="Label" parent="VBoxContainer/Profit"]
+margin_right = 179.0
+margin_bottom = 14.0
+text = "Global Revenue: "
+valign = 1
+
+[node name="Money" type="Label" parent="VBoxContainer/Profit"]
+margin_right = 179.0
+margin_bottom = 14.0
+text = "$0"
+align = 2
+valign = 1
+
+[node name="Expenses" type="MarginContainer" parent="VBoxContainer"]
+margin_top = 18.0
+margin_right = 179.0
+margin_bottom = 32.0
+
+[node name="Label" type="Label" parent="VBoxContainer/Expenses"]
+margin_right = 179.0
+margin_bottom = 14.0
+text = "Expenses:"
+valign = 1
+
+[node name="Money" type="Label" parent="VBoxContainer/Expenses"]
+margin_right = 179.0
+margin_bottom = 14.0
+text = "$0"
+align = 2
+valign = 1

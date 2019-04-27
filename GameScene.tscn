@@ -1,0 +1,73 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Paddle.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Paddle.gd" type="Script" id=2]
+[ext_resource path="res://Ball.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Block.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Purchase.tscn" type="PackedScene" id=5]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 20, 540 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 960, 20 )
+
+[node name="GameScene" type="Node2D"]
+
+[node name="Paddle" parent="." instance=ExtResource( 1 )]
+position = Vector2( 970.25, 1076.5 )
+script = ExtResource( 2 )
+
+[node name="Ball" parent="." instance=ExtResource( 3 )]
+position = Vector2( 938.75, 757 )
+
+[node name="Block" parent="." instance=ExtResource( 4 )]
+position = Vector2( 277.25, 498.25 )
+
+[node name="Block2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 542.75, 500.5 )
+
+[node name="Block3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 797, 507.25 )
+
+[node name="Block4" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1098.5, 500.5 )
+
+[node name="Block5" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1363.55, 508.6 )
+
+[node name="Block6" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1606.55, 504.1 )
+
+[node name="Wall" type="StaticBody2D" parent="."]
+position = Vector2( 0, 540 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall"]
+shape = SubResource( 1 )
+
+[node name="Wall2" type="StaticBody2D" parent="."]
+position = Vector2( 1920, 540 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall2"]
+shape = SubResource( 1 )
+
+[node name="Ceiling" type="StaticBody2D" parent="."]
+position = Vector2( 960, 0 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ceiling"]
+shape = SubResource( 2 )
+
+[node name="Purchase" parent="." instance=ExtResource( 5 )]
+position = Vector2( 802.502, 723.501 )
+
+[node name="Purchase2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1045.5, 287.001 )
+value = 200
+
+[node name="Purchase3" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1455, 793.251 )
+value = 300
+
+[node name="Purchase4" parent="." instance=ExtResource( 5 )]
+position = Vector2( 222.001, 201.501 )
+value = 400
