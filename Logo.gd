@@ -19,3 +19,12 @@ func connect_to_server():
 	peer.create_client(SERVER_IP, SERVER_PORT)
 	get_tree().set_network_peer(peer)
 	
+	get_tree().get_nodes_in_group("Lobby")[0].connect("new_rewards", self, "update_rewards")
+	
+func update_rewards(rewards):
+	for reward in rewards:
+		var label = $"Rewards/Sample Label".duplicate()
+		label.text = reward
+		label.show()
+		$Rewards.add_child(label)
+		print(label.get_parent())

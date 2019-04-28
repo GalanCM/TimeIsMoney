@@ -4,6 +4,10 @@ const SERVER_PORT = 9000
 const SERVER_IP = "127.0.0.1"
 const MAX_PLAYERS = 20
 
+signal new_rewards(rewards)
+
+sync var rewards = [] setget set_rewards
+
 func _ready():
 	get_tree().paused = true
 	
@@ -11,7 +15,7 @@ func _ready():
 		var peer := NetworkedMultiplayerENet.new()
 		peer.create_server(SERVER_PORT, MAX_PLAYERS)
 		get_tree().set_network_peer(peer)
-		$Panel.queue_free()
+		get_tree().connect("network_peer_connected", self, "_player_connected")
 		
 		var profit_node : Node = get_tree().get_nodes_in_group("Profit")[0]
 		var save_game = File.new()
@@ -24,9 +28,16 @@ func _ready():
 				profit -= 1
 				
 			save_game.close()
+		$Logo.queue_free()
 	
 func _player_connected(id):
-	get_tree().paused = false
+	if (is_network_master()):
+		rset("rewards", rewards)
+		print(rewards)
+		
+func set_rewards(value):
+	rewards = value
+	emit_signal("new_rewards", value)
 	
 func save_game():
 	if is_network_master():

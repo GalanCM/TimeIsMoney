@@ -6,5 +6,6 @@
 [node name="PurchaseGroup3" type="Node2D"]
 script = ExtResource( 1 )
 value = 10
+reward_name = "$10 Blocks"
 
 [node name="Group3" parent="." instance=ExtResource( 2 )]

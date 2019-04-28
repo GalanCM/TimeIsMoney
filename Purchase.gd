@@ -3,6 +3,7 @@ extends Node2D
 signal buy(cost)
 
 export var value = 100
+export var reward_name = ""
 
 var children := []
 var active = false
@@ -34,4 +35,5 @@ sync func restore():
 func buy(profit):
 	if active == false and profit >= value:
 		rpc("restore")
+		get_tree().get_nodes_in_group("Lobby")[0].rewards.append(reward_name)
 		emit_signal("buy", value)

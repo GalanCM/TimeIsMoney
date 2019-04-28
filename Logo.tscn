@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Logo.gd" type="Script" id=1]
 [ext_resource path="res://logo.png" type="Texture" id=2]
@@ -27,6 +27,15 @@ tracks/0/keys = {
 
 [sub_resource type="DynamicFont" id=3]
 size = 25
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 40
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 30
+extra_spacing_bottom = 10
 font_data = ExtResource( 3 )
 
 [node name="Logo" type="Node2D"]
@@ -67,3 +76,28 @@ margin_bottom = 1169.22
 custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "*rewards are in-game only"
+
+[node name="Label" type="Label" parent="."]
+margin_left = 727.0
+margin_top = 386.0
+margin_right = 1863.0
+margin_bottom = 435.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Players have earned the following rewards already!"
+
+[node name="Rewards" type="VBoxContainer" parent="."]
+margin_left = 765.0
+margin_top = 457.0
+margin_right = 1863.0
+margin_bottom = 1023.0
+
+[node name="Sample Label" type="Label" parent="Rewards"]
+visible = false
+margin_left = 50.0
+margin_top = 53.0
+margin_right = 1136.0
+margin_bottom = 91.0
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0, 0, 0.737255 )
+text = "$2 Blocks"
