@@ -23,6 +23,8 @@ func take_hit():
 	hits_taken += 1
 	if hits - hits_taken <= 0:
 		queue_free()
+	else:
+		$AnimationPlayer.play("flash")
 		
 func queue_free():
 	add_income()

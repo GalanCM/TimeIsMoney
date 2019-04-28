@@ -4,9 +4,9 @@ class_name Profit
 signal profit_updated(amount)
 
 sync var profit := 0 setget set_profit
-sync var expenses := 0 setget set_expenses
+sync var expenses := 0.0 setget set_expenses
 
-var net_profit := 0
+var net_profit := 0.0
 
 func _ready() -> void:
 	get_tree().connect("network_peer_connected", self, "sync_profit")
@@ -18,7 +18,7 @@ func sync_profit(id):
 
 func set_profit(value):
 	profit = value
-	$VBoxContainer/Profit/Money.text = "$" + str(value)
+	$VBoxContainer/Profit/Money.text = "$" + str(value).pad_decimals(2)
 	get_tree().get_nodes_in_group("Lobby")[0].save_game()
 	emit_signal("profit_updated", profit - expenses)
 	update_net_profit()
@@ -26,12 +26,12 @@ func set_profit(value):
 func set_expenses(value):
 	expenses = value
 	get_tree().get_nodes_in_group("Lobby")[0].save_game()
-	$VBoxContainer/Expenses/Money.text = "-$" + str(value)
+	$VBoxContainer/Expenses/Money.text = "-$" + str(value).pad_decimals(2)
 	update_net_profit()
 	
 func update_net_profit():
 	net_profit = profit - expenses
-	$VBoxContainer/NetProfit/Money.text = "$" + str(net_profit)
+	$VBoxContainer/NetProfit/Money.text = "$" + str(net_profit).pad_decimals(2)
 
 remotesync func new_income(amount: int) -> void:
 	self.profit += amount

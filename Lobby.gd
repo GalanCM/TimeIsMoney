@@ -38,6 +38,7 @@ func set_rewards(value):
 	rewards = value
 	emit_signal("new_rewards", value)
 	
+	
 func save_game():
 	if is_network_master():
 		var save_game = File.new()

@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Lobby.gd" type="Script" id=1]
 [ext_resource path="res://GameScene.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Profit.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Stats.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Logo.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Reward.tscn" type="PackedScene" id=6]
 
 [node name="Lobby" type="Node" groups=[
 "Lobby",
@@ -18,3 +19,5 @@ script = ExtResource( 1 )
 [node name="Stats" parent="." instance=ExtResource( 4 )]
 
 [node name="Logo" parent="." instance=ExtResource( 5 )]
+
+[node name="Reward" parent="." instance=ExtResource( 6 )]

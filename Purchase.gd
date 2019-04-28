@@ -1,6 +1,7 @@
 extends Node2D
 
 signal buy(cost)
+signal unlock(name)
 
 export var value = 100
 export var reward_name = ""
@@ -21,6 +22,7 @@ func _ready():
 	var profit_node : Profit = get_tree().get_nodes_in_group("Profit")[0]
 	profit_node.connect("profit_updated", self, "buy")
 	connect("buy", profit_node, "expense")
+	connect("unlock", get_tree().get_nodes_in_group("Reward")[0], "announce")
 	
 func restore_on_connect(id):
 	if active:
@@ -36,4 +38,5 @@ func buy(profit):
 	if active == false and profit >= value:
 		rpc("restore")
 		get_tree().get_nodes_in_group("Lobby")[0].rewards.append(reward_name)
-		emit_signal("buy", value)
+		emit_signal("buy", value / 10.0)
+		emit_signal("unlock", reward_name)
