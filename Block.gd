@@ -28,6 +28,13 @@ func queue_free():
 	add_income()
 	
 	get_tree().get_nodes_in_group("GameScene")[0].add_child(break_player)
+	
+	for i in range(value):
+		var coin = preload("res://Coin.tscn").instance()
+		coin.global_position.x += global_position.x  + i / 2 * (-3 if i % 2 == 1 else 3)
+		coin.global_position.y = global_position.y
+		get_tree().get_nodes_in_group("GameScene")[0].add_child(coin)
+		
 	break_player.play()
 	
 	.queue_free()

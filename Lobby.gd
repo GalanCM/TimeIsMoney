@@ -2,7 +2,7 @@ extends Node
 
 const SERVER_PORT = 9000
 const SERVER_IP = "127.0.0.1"
-const MAX_PLAYERS = 10
+const MAX_PLAYERS = 20
 
 func _ready():
 	get_tree().paused = true
@@ -24,23 +24,9 @@ func _ready():
 				profit -= 1
 				
 			save_game.close()
-			
-	
-	else:
-		$Panel/VBoxContainer/Button.connect("button_up", self, "connect_to_server")
-		get_tree().connect("connected_to_server", self, "_connected_ok")
-	
-func connect_to_server():
-	var peer := NetworkedMultiplayerENet.new()
-	peer.create_client(SERVER_IP, SERVER_PORT)
-	get_tree().set_network_peer(peer)
 	
 func _player_connected(id):
 	get_tree().paused = false
-	
-func _connected_ok():
-	get_tree().paused = false
-	$Panel.queue_free()
 	
 func save_game():
 	if is_network_master():

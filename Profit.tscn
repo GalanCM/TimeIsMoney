@@ -1,13 +1,25 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Profit.gd" type="Script" id=1]
+[ext_resource path="res://theme.tres" type="Theme" id=1]
+[ext_resource path="res://Profit.gd" type="Script" id=2]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_right = 2
+border_width_bottom = 5
+border_color = Color( 0.964706, 1, 0, 1 )
+corner_radius_bottom_right = 10
 
 [node name="Profit" type="Panel" groups=[
 "Profit",
 ]]
-margin_right = 199.0
-margin_bottom = 58.0
-script = ExtResource( 1 )
+margin_left = -1.0
+margin_top = -1.0
+margin_right = 515.0
+margin_bottom = 86.0
+theme = ExtResource( 1 )
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 2 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 anchor_right = 1.0
@@ -18,36 +30,36 @@ margin_right = -10.0
 margin_bottom = -10.0
 
 [node name="Profit" type="MarginContainer" parent="VBoxContainer"]
-margin_right = 179.0
-margin_bottom = 14.0
+margin_right = 496.0
+margin_bottom = 30.0
 
 [node name="Label" type="Label" parent="VBoxContainer/Profit"]
-margin_right = 179.0
-margin_bottom = 14.0
+margin_right = 496.0
+margin_bottom = 30.0
 text = "Global Revenue: "
 valign = 1
 
 [node name="Money" type="Label" parent="VBoxContainer/Profit"]
-margin_right = 179.0
-margin_bottom = 14.0
+margin_right = 496.0
+margin_bottom = 30.0
 text = "$0"
 align = 2
 valign = 1
 
 [node name="Expenses" type="MarginContainer" parent="VBoxContainer"]
-margin_top = 18.0
-margin_right = 179.0
-margin_bottom = 32.0
+margin_top = 34.0
+margin_right = 496.0
+margin_bottom = 64.0
 
 [node name="Label" type="Label" parent="VBoxContainer/Expenses"]
-margin_right = 179.0
-margin_bottom = 14.0
+margin_right = 496.0
+margin_bottom = 30.0
 text = "Expenses:"
 valign = 1
 
 [node name="Money" type="Label" parent="VBoxContainer/Expenses"]
-margin_right = 179.0
-margin_bottom = 14.0
+margin_right = 496.0
+margin_bottom = 30.0
 text = "$0"
 align = 2
 valign = 1
