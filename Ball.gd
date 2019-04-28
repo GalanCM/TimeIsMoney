@@ -5,17 +5,21 @@ signal ball_lost
 
 export var cost = 50
 
-onready var velocity := Vector2(rand_range(-200, 200), rand_range(300, 500) * -1 if randi() % 2 == 0 else 1)
+var velocity : Vector2
 
 func _ready() -> void:
+	var direction = Vector2(rand_range(-1,1), rand_range(-1,0))
+	velocity = direction * 400
+	
 	var game_scene = get_tree().get_nodes_in_group("GameScene")[0]
 	var profit = get_tree().get_nodes_in_group("Profit")[0]
 	connect("ball_lost", game_scene, "new_ball")
 	connect("ball_lost", profit, "expense", [cost])
 
 func _physics_process(delta: float) -> void:
-	var ball_collision := move_and_collide(velocity * delta)
+	move_and_slide(velocity)
 	
+	var ball_collision := get_slide_collision( get_slide_count() - 1 )
 	if ball_collision != null:
 		velocity = velocity.bounce(ball_collision.normal)
 		
