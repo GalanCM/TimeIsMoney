@@ -33,7 +33,6 @@ func _ready():
 func _player_connected(id):
 	if (is_network_master()):
 		rset("rewards", rewards)
-		print(rewards)
 		
 func set_rewards(value):
 	rewards = value

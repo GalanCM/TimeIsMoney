@@ -14,7 +14,7 @@ func _ready() -> void:
 	var game_scene = get_tree().get_nodes_in_group("GameScene")[0]
 	var profit = get_tree().get_nodes_in_group("Profit")[0]
 	connect("ball_lost", game_scene, "new_ball")
-	connect("ball_lost", profit, "expense", [cost])
+	connect("ball_lost", profit, "expense", [max( ceil(profit.net_profit * 0.1), 1) ])
 
 func _physics_process(delta: float) -> void:
 	move_and_slide(velocity)
@@ -22,6 +22,10 @@ func _physics_process(delta: float) -> void:
 	var ball_collision := get_slide_collision( get_slide_count() - 1 )
 	if ball_collision != null:
 		velocity = velocity.bounce(ball_collision.normal)
+		var speed = velocity.length()
+		while abs(velocity.y) < 50:
+			velocity.y += sign(velocity.y)
+		velocity = velocity.normalized() * velocity.length()
 		
 		if ball_collision.collider.has_method("take_hit"):
 			ball_collision.collider.take_hit()

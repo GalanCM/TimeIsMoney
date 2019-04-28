@@ -27,4 +27,3 @@ func update_rewards(rewards):
 		label.text = reward
 		label.show()
 		$Rewards.add_child(label)
-		print(label.get_parent())
