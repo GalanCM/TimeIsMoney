@@ -26,6 +26,16 @@ func _physics_process(delta: float) -> void:
 		if ball_collision.collider.has_method("take_hit"):
 			ball_collision.collider.take_hit()
 		velocity *= 1.01
+		
+		if $Ping.playing == false or $Ping.get_playback_position() > 0.1:
+			if ball_collision.collider.is_in_group("Paddle"):
+				$Ping.stream.audio_stream = preload("res://paddle.wav")
+			elif ball_collision.collider.is_in_group("Block"):
+				$Ping.stream.audio_stream = preload("res://block.wav")
+			else:
+				$Ping.stream.audio_stream = preload("res://wall.wav")
+				
+			$Ping.play()
 
 	velocity *= 1 + 0.02 * delta
 	

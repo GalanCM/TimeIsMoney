@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://GameScene.gd" type="Script" id=1]
 [ext_resource path="res://bg.svg" type="Texture" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://Ball.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Paddle.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Paddle.gd" type="Script" id=15]
+[ext_resource path="res://lose.wav" type="AudioStream" id=16]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 20, 540 )
@@ -83,3 +84,7 @@ position = Vector2( 960, 750 )
 [node name="Paddle" parent="." instance=ExtResource( 14 )]
 position = Vector2( 960, 1040 )
 script = ExtResource( 15 )
+
+[node name="LosePlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 16 )
+volume_db = -7.0
