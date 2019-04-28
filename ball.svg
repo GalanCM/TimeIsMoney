@@ -9,33 +9,47 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="30"
-   height="30"
-   viewBox="0 0 7.9374999 7.9375002"
+   width="32"
+   height="32"
+   viewBox="0 0 8.4666666 8.4666669"
    version="1.1"
    id="svg8"
    inkscape:version="0.92.2 5c3e80d, 2017-08-06"
-   sodipodi:docname="ball.svg">
+   sodipodi:docname="ball.svg"
+   inkscape:export-filename="/Users/dev-galan/projects/Time is Money/game/ball.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
   <defs
-     id="defs2" />
+     id="defs2">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath27382">
+      <circle
+         r="3.9687502"
+         cy="293.03125"
+         cx="3.9687502"
+         id="circle27384"
+         style="opacity:1;fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.05833328;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.32156863;paint-order:fill markers stroke" />
+    </clipPath>
+  </defs>
   <sodipodi:namedview
      id="base"
-     pagecolor="#ffffff"
+     pagecolor="#000a78"
      bordercolor="#666666"
      borderopacity="1.0"
-     inkscape:pageopacity="0.0"
+     inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.35"
-     inkscape:cx="-720"
-     inkscape:cy="560"
+     inkscape:zoom="4.0010457"
+     inkscape:cx="3.3033751"
+     inkscape:cy="9.3061128"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      units="px"
      inkscape:window-width="1440"
      inkscape:window-height="856"
-     inkscape:window-x="135"
-     inkscape:window-y="25"
+     inkscape:window-x="15"
+     inkscape:window-y="16"
      inkscape:window-maximized="0" />
   <metadata
      id="metadata5">
@@ -53,12 +67,40 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(0,-289.0625)">
+     transform="translate(0,-288.53333)">
     <circle
-       style="opacity:1;fill:#1b66bd;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.05833328;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.32156863;paint-order:fill markers stroke"
+       style="opacity:1;fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.05833328;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.32156863;paint-order:fill markers stroke"
        id="path13797"
-       cx="3.9687502"
-       cy="293.03125"
+       cx="4.2333336"
+       cy="292.76666"
        r="3.9687502" />
+    <circle
+       r="1.4554032"
+       cy="290.98978"
+       cx="5.3558903"
+       id="circle27376"
+       style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.05833328;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.32156863;paint-order:fill markers stroke" />
+    <circle
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.5291667;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.99492385;paint-order:fill markers stroke"
+       id="circle27378"
+       cx="5.0909891"
+       cy="291.25436"
+       r="5.1026788"
+       clip-path="url(#clipPath27382)"
+       transform="translate(0.26458314,-0.26458663)" />
+    <circle
+       clip-path="url(#clipPath27382)"
+       r="5.1026788"
+       cy="291.25436"
+       cx="5.0909891"
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1.58749998;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.24705882;paint-order:fill markers stroke"
+       id="circle27386"
+       transform="translate(0.33071169,-0.26458663)" />
+    <circle
+       r="3.9687502"
+       cy="292.76666"
+       cx="4.2333336"
+       id="circle27411"
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ff0000;stroke-width:0.26458334;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.97969544;paint-order:fill markers stroke" />
   </g>
 </svg>

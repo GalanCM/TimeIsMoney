@@ -20,22 +20,22 @@
      id="defs2" />
   <sodipodi:namedview
      id="base"
-     pagecolor="#ffffff"
+     pagecolor="#000a78"
      bordercolor="#666666"
      borderopacity="1.0"
-     inkscape:pageopacity="0.0"
+     inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.35"
-     inkscape:cx="-720"
-     inkscape:cy="560"
+     inkscape:zoom="2.17"
+     inkscape:cx="97.205849"
+     inkscape:cy="-41.953094"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      units="px"
      inkscape:window-width="1440"
      inkscape:window-height="856"
-     inkscape:window-x="135"
-     inkscape:window-y="25"
+     inkscape:window-x="2"
+     inkscape:window-y="11"
      inkscape:window-maximized="0" />
   <metadata
      id="metadata5">
@@ -55,11 +55,11 @@
      id="layer1"
      transform="translate(0,-291.70833)">
     <rect
-       style="opacity:1;fill:#1b66bd;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.0583334;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.32156863;paint-order:fill markers stroke"
+       style="opacity:1;fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:1.03187501;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill"
        id="rect9230"
-       width="52.916668"
-       height="5.291667"
-       x="-7.1054274e-15"
-       y="291.70834" />
+       width="51.884796"
+       height="4.2597919"
+       x="0.51593757"
+       y="292.22427" />
   </g>
 </svg>
