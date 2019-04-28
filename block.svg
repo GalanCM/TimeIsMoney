@@ -55,11 +55,11 @@
      id="layer1"
      transform="translate(0,-291.70833)">
     <rect
-       style="opacity:1;fill:#1b66bd;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.0583334;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.32156863;paint-order:fill markers stroke"
+       style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.0583334;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.32156863;paint-order:fill markers stroke"
        id="rect9230"
-       width="26.458334"
+       width="21.166666"
        height="5.291667"
-       x="-3.5527137e-15"
+       x="2.6458333"
        y="291.70834" />
   </g>
 </svg>

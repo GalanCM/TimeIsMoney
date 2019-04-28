@@ -9,12 +9,18 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "KinematicBody2D",
+"class": "Ball",
+"language": "GDScript",
+"path": "res://Ball.gd"
+}, {
 "base": "Panel",
 "class": "Profit",
 "language": "GDScript",
 "path": "res://Profit.gd"
 } ]
 _global_script_class_icons={
+"Ball": "",
 "Profit": ""
 }
 
@@ -61,4 +67,5 @@ Down={
 quality/driver/driver_name="GLES2"
 vram_compression/import_etc=true
 vram_compression/import_etc2=false
+environment/default_clear_color=Color( 0, 0.0392157, 0.470588, 1 )
 environment/default_environment="res://default_env.tres"

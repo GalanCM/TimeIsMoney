@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Purchase.gd" type="Script" id=1]
+[ext_resource path="res://Group1.tscn" type="PackedScene" id=2]
+
+[node name="PurchaseGroup1" type="Node2D"]
+script = ExtResource( 1 )
+value = 0
+
+[node name="Group1" parent="." instance=ExtResource( 2 )]
